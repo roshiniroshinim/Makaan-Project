@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Dropdown and Box Shadow</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: rgb(0, 185, 142); font-size: 30px; font-weight: bold;">
+                <img src="images/icon-deal.png" alt="Makaan Logo" class="navbar-logo"> Makaan
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProperty" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            PROPERTY
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownProperty">
+                            <li><a class="dropdown-item" href="#">Property List</a></li>
+                            <li><a class="dropdown-item" href="#">Property Agent</a></li>
+                            <li><a class="dropdown-item" href="#">Property Type</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            PAGES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownPages">
+                            <li><a class="dropdown-item" href="#">Testimonial</a></li>
+                            <li><a class="dropdown-item" href="#">404 Error</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-add-property" style="background-color: rgb(0, 185, 142)">Add Property</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!---HOME-->
+    <section class="home-section">
+        <div class="home-content">
+            <h1>Find A <span style="color: rgb(0, 185, 142); font-size: 50px; font-weight: bold;">Perfect Home </span>To
+                Live With Your Family</h1>
+            <p>Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita
+                et kasd rebum sea elitr.</p>
+            <button class="btn-get-started">Get Started</button>
+        </div>
+        <div class="home-image">
+            <img src="images/carousel-1.jpg" alt="Home Image">
+            <img src="images/carousel-2.jpg" alt="Home Image">
+        </div>
+        <button class="scroll-to-top" onclick="scrollToTop()" style="background-color: rgb(0, 185, 142)">↑</button>
+    </section>
+
+    <section class="search-section">
+        <form class="search-form">
+            <input type="text" class="form-control" placeholder="Search Keyword">
+            <select class="form-control">
+                <option value="">Property Type</option>
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+                <option value="commercial">Commercial</option>
+            </select>
+            <select class="form-control">
+                <option value="">Location</option>
+                <option value="namakkal">Namakkal</option>
+                <option value="chennai">Chennai</option>
+                <option value="bangalore">Bangalore</option>
+            </select>
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </section>
+
+    <h1>Property Types</h1>
+
+  <!-- Lorem Ipsum Paragraphs -->
+  <div class="lorem">
+    <p class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit Delectus modi 
+      <br>libero exercitationem, ea odit quis?</p>
+      </p>
+  </div>
+
+  <!-- Property Cards -->
+  <div class="property-container">
+    <div class="property-card">
+      <img src="./images/icon-apartment.png" alt="Property 1" height="100px" width="100px">
+      <div class="property-info">
+        <h3>Apartment</h3>
+        <p>123 Properties</p>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <img src="./images/icon-building.png" alt="Property 2">
+      <div class="property-info">
+        <h3>Villa</h3>
+        <p>123 Properties</p>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <img src="./images/icon-condominium.png" alt="Property 3">
+      <div class="property-info">
+        <h3>Home</h3>
+        <p>123 Properties</p>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <img src="./images/icon-deal.png" alt="Property 4">
+      <div class="property-info">
+        <h3>Office</h3>
+        <p>123 Properties</p>
+      </div>
+    </div>
+    <div class="property-card">
+      <img src="./images/icon-house.png" alt="Property 4">
+      <div class="property-info">
+        <h3>Building</h3>
+        <p>123 Properties</p>
+      </div>
+    </div>
+    <div class="property-card">
+      <img src="./images/icon-housing.png" alt="Property 4">
+      <div class="property-info">
+        <h3>Townhouse</h3>
+        <p>123 Properties</p>
+      </div>
+    </div>
+    <div class="property-card">
+      <img src="./images/icon-luxury.png" alt="Property 4">
+      <div class="property-info">
+        <h3>Shop</h3>
+        <p>123 Properties</p>
+      </div>
+    </div>
+    <div class="property-card">
+      <img src="./images/icon-neighborhood.png" alt="Property 4">
+      <div class="property-info">
+        <h3>Garage</h3>
+        <p>123 Properties</p>
+      </div>
+    </div>
+  </div>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="image-wrapper">
+      <div class="image">
+        <img src="./images/about.jpg" alt="Real Estate Image">
+      </div>
+      </div>
+      <div class="text">
+        <h1>#1 Place To Find The<br> Perfect Property</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur convallis velit ac libero volutpat, nec tempus ligula aliquet. Phasellus gravida orci id sapien cursus.</p>
+  
+        <div class="features">
+          <div class="feature-item">
+            <span class="icon"><i class="fa-solid fa-check"></i></span>
+            <p>Premium Location</p>
+          </div>
+          <div class="feature-item">
+            <span class="icon"><i class="fa-solid fa-check"></i></span>
+            <p>Modern Design</p>
+          </div>
+          <div class="feature-item">
+            <span class="icon"><i class="fa-solid fa-check"></i></span>
+            <p>Fully Furnished</p>
+          </div>
+        </div>
+  
+        <button class="cta-button">Read More</button>
+      </div>
+    </section>
+  <!-- Section with Heading, Text, Buttons -->
+  <section class="content-section">
+    <div class="heading-container">
+      <h2>Property Listing</h2>
+      <p>Lorem ipsum dolor sit amet, Curabitur convallis velit ac libero volutpat, nec tempus ligula aliquet. Phasellus gravida orci id sapien cursus.</p>
+    </div>
+    
+    <!-- Buttons Section -->
+    <div class="button-container">
+      <button class="cta-button">Featured</button>
+      <button class="cta-button1" id="btn1">For sell</button>
+      <button class="cta-button1" id="btn1">For Rent</button>
+    </div>
+  </section>
+  <!-- Image Gallery Section -->
+  <div class="image-gallery">
+  
+    <!-- Property 1 -->
+    <div class="image-item">
+      <img src="./images/property-1.jpg" alt="Property 1"featured >
+      <!--<h3>Appartment</h3>-->
+      <div class="overlay">
+        <div class="icon-container">
+          <span class="price">$12,345</span>
+          <h4>Golden Urban House For <br>Sale</h4>
+          <span class="map"><i class="fas fa-map-marker-alt"></i>123 Street ,New York,USA</span>
+          <div class="icons-container">
+            <div class="icons">
+              <span class="location-icon"><i class="fas fa-map-marker-alt"></i> Miami</span>
+              <span class="bed-icon"><i class="fas fa-bed"></i> 3 Bed</span>
+              <span class="bath-icon"><i class="fas fa-bath"></i> 2 Bath</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property 2 -->
+    <div class="image-item">
+      <img src="./images/property-2.jpg" alt="Property 2">
+      <!--<h3>Villa</h3>-->
+      <div class="overlay">
+        <div class="icon-container">
+          <span class="price">$15,678</span>
+          <h4>Golden Urban House For <br>Sale</h4>
+          <span class="map"><i class="fas fa-map-marker-alt"></i>123 Street ,New York,USA</span>
+          <div class="icons-container">
+            <div class="icons">
+              <span class="location-icon"><i class="fas fa-map-marker-alt"></i> Miami</span>
+              <span class="bed-icon"><i class="fas fa-bed"></i> 3 Bed</span>
+              <span class="bath-icon"><i class="fas fa-bath"></i> 2 Bath</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Property 3 -->
+    <div class="image-item">
+      <img src="./images/property-3.jpg" alt="Property 3">
+     <!----<h3>Office</h3>-->
+      <div class="overlay">
+        <div class="icon-container">
+          <span class="price">$18,500</span>
+          <h4>Golden Urban House For <br>Sale</h4>
+          <span class="map"><i class="fas fa-map-marker-alt"></i>123 Street ,New York,USA</span>
+          <div class="icons-container">
+            <div class="icons">
+              <span class="location-icon"><i class="fas fa-map-marker-alt"></i> Miami</span>
+              <span class="bed-icon"><i class="fas fa-bed"></i> 3 Bed</span>
+              <span class="bath-icon"><i class="fas fa-bath"></i> 2 Bath</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- Property 4-->
+     <div class="image-item">
+        <img src="./images/property-4.jpg" alt="Property 3">
+        <!--<h3>Building</h3>-->
+        <div class="overlay">
+          <div class="icon-container">
+            <span class="price">$18,500</span>
+            <h4>Golden Urban House For <br>Sale</h4>
+          <span class="map"><i class="fas fa-map-marker-alt"></i>123 Street ,New York,USA</span>
+          <div class="icons-container">
+            <div class="icons">
+              <span class="location-icon"><i class="fas fa-map-marker-alt"></i> Miami</span>
+              <span class="bed-icon"><i class="fas fa-bed"></i> 3 Bed</span>
+              <span class="bath-icon"><i class="fas fa-bath"></i> 2 Bath</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Property 5 -->
+    <div class="image-item">
+        <img src="./images/property-5.jpg" alt="Property 3">
+        <!--h3>Home</h3>-->
+        <div class="overlay">
+          <div class="icon-container">
+            <span class="price">$18,500</span>
+            <h4>Golden Urban House For <br>Sale</h4>
+          <span class="map"><i class="fas fa-map-marker-alt"></i>123 Street ,New York,USA</span>
+           <!-- Icons Section with Box Container -->
+<div class="icons-container">
+    <div class="icons">
+      <span class="location-icon"><i class="fas fa-map-marker-alt"></i> Miami</span>
+      <span class="bed-icon"><i class="fas fa-bed"></i> 3 Bed</span>
+      <span class="bath-icon"><i class="fas fa-bath"></i> 2 Bath</span>
+    </div>
+  </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Property 6 -->
+    <div class="image-item">
+        <img src="./images/property-6.jpg" alt="Property 3">
+       <!---- <h3>Shop</h3>-->
+        <div class="overlay">
+          <div class="icon-container">
+            <span class="price">$18,500</span>
+            <h4>Golden Urban House For <br>Sale</h4>
+          <span class="map"><i class="fas fa-map-marker-alt"></i>123 Street ,New York,USA</span>
+          <div class="icons-container">
+            <div class="icons">
+              <span class="location-icon"><i class="fas fa-map-marker-alt"></i> Miami</span>
+              <span class="bed-icon"><i class="fas fa-bed"></i> 3 Bed</span>
+              <span class="bath-icon"><i class="fas fa-bath"></i> 2 Bath</span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <button class="cta-button" >Browse More Property</button>
+    <!-- Add more properties as needed... -->
+  </div>
+<!-- Section with Image on the Left and Content on the Right -->
+<section class="content-section">
+    <div class="content-wrapper">
+      <!-- Image on the Left Side -->
+      <div class="image-container">
+        <img src="./images/call-to-action.jpg" alt="Property 1">
+      </div>
+  
+      <!-- Content on the Right Side -->
+      <div class="text-container">
+        <h2>Contact With Our<br>Certified Agent</h2>
+        <p class="lorem30">Lorem ipsum dolor sit amet,Curabitur convallis velit ac libero volutpat, nec tempus ligula aliquet. Phasellus gravida orci id sapien cursus.</p>
+  
+        <!-- Buttons Section -->
+        <div class="button-container">
+          <button class="cta-button"><i class="fa-solid fa-phone"></i>Make A Call</button>
+          <button class="cta-button" style="background-color: black;"><i class="fa-solid fa-calendar-days"></i>Get Appoinment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+   <!-- Heading Section -->
+   <header class="header">
+    <h1 class="center-text">Customer Reviews</h1>
+</header>
+
+<!-- Reviews Section -->
+<section class="reviews">
+    <div class="review">
+        <p class="lorem-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit Delectus modi 
+            <br>libero exercitationem, ea odit quis?</p>
+        <div class="images">
+            <!-- Customer 1 -->
+            <div class="review-item">
+                <img src="./images/team-1.jpg" alt="Customer 1">
+                 <!-- Social Media Icons -->
+          <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+         </div>
+                <div class="review-text">
+                    <p class="customer-name">Full Name</p>
+                    <p class="customer-review">This service</p>
+                </div>
+            </div>
+
+            <!-- Customer 2 -->
+            <div class="review-item">
+                <img src="./images/team-2.jpg" alt="Customer 1">
+                 <!-- Social Media Icons -->
+          <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+         </div>
+                <div class="review-text">
+                    <p class="customer-name">Full Name</p>
+                    <p class="customer-review">This service</p>
+                </div>
+            </div>
+
+            <!-- Customer 3 -->
+            <div class="review-item">
+                <img src="./images/team-3.jpg" alt="Customer 1">
+                 <!-- Social Media Icons -->
+          <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+         </div>
+                <div class="review-text">
+                    <p class="customer-name">Full Name</p>
+                    <p class="customer-review">This service</p>
+                </div>
+            </div>
+            <!-- Customer 4 -->
+            <div class="review-item">
+                <img src="./images/team-4.jpg" alt="Customer 1">
+                 <!-- Social Media Icons -->
+          <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+         <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+         </div>
+                <div class="review-text">
+                    <p class="customer-name">Full Name</p>
+                    <p class="customer-review">This service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Heading Section -->
+<header class="header">
+    <h1 class="center-text">Our Client Says</h1>
+</header>
+
+<!-- Reviews Section -->
+<section class="reviews">
+    <!-- Lorem Text Above Reviews -->
+    <p class="lorem-text1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque pariatur
+        <br> nihil sint illum earum temporibus.
+    </p>
+
+    <!-- Review Item 1 -->
+    <div class="review-item1">
+        <div class="review-content">
+            <img src="./images/testimonial-1.jpg" alt="Customer 1">
+            <div class="review-text1">
+                <p class="customer-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                 Nulla volutpat aliquam leo. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                 Vel, ut!</p>
+                <p class="customer-name">John Doe</p>
+                <p class="customer-name" style="font-size: 13px;">Profession</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-item1">
+        <div class="review-content">
+            <img src="./images/testimonial-2.jpg" alt="Customer 1">
+            <div class="review-text1">
+                <p class="customer-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                 Nulla volutpat aliquam leo. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                 Vel, ut!</p>
+                <p class="customer-name">John Doe</p>
+                <p class="customer-name" style="font-size: 13px;">Profession</p>
+            </div>
+        </div>
+    </div>
+    <div class="review-item1">
+        <div class="review-content">
+            <img src="./images/testimonial-3.jpg" alt="Customer 1">
+            <div class="review-text1">
+                <p class="customer-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                 Nulla volutpat aliquam leo. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                 Vel, ut!</p>
+                <p class="customer-name">John Doe</p>
+                <p class="customer-name" style="font-size: 15px;">Profession</p>
+            </div>
+        </div>
+    </div>
+</section>
+  </div>
+  </body>
+  </html>
