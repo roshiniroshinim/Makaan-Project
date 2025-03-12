@@ -331,7 +331,7 @@ body{
       text-align: center;
     }
   
-    .main-content .image {
+    .main-content .image img {
       max-width: 80%;
       margin-bottom: 20px;
     }
@@ -454,6 +454,39 @@ body{
       flex-direction: column;
       gap: 10px;
       align-items: center;
+    }
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .image-container,
+    .text-container {
+      max-width: 100%;
+      margin: 0;
+      padding: 20px 0;
+    }
+
+    .button-container {
+      flex-direction: column;
+    }
+
+    .cta-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 20px;
+    }
+
+    .lorem30 {
+      font-size: 14px;
     }
   }
   /* Image Gallery Section */
